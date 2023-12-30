@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "mocks-services"
+version = "0.1.0"
+description = ""
+authors = ["Vitaly Legchilkin <vlegchilkin@gmail.com>"]
+packages = [
+    { include = "mocks/**/*" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+mscom = { version = "^0.1.2", source = "local" }
+uvicorn = { version = "^0.25", source = "pypi" }
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+addopts = "--color=yes --tb=short -vvv"
+log_cli = "true"
+log_cli_level = "info"
+log_format = "%(asctime)s | %(levelname)-7s | [%(name)s] %(message)s"
+log_date_format = "%Y-%m-%d %H:%M:%S"
+testpaths = "tests"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "local"
+url = "http://127.0.0.1:3141/user/local/+simple"
+secondary = true
+default = false
+
+[tool.black]
+line-length = 120

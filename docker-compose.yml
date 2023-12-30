@@ -1,0 +1,85 @@
+version: '3.4'
+
+x-build-args: &build-args
+  EXTRA_INDEX_URLS: |
+    --index-url http://host.docker.internal:3141/root/local/+simple
+    --extra-index-url https://pypi.python.org/simple
+    --trusted-host host.docker.internal
+
+services:
+  .service: &service
+    image: service
+    build:
+      context: .
+      args:
+        <<: *build-args
+    environment:
+      LOG_LEVEL: 'debug'
+    volumes:
+      - ./microservices:/home/worker/.local/lib/python3.12/site-packages/microservices
+
+  alpha-centauri:
+    <<: *service
+    environment:
+      RELOAD_DIRS: "[\"/home/worker/.local/lib/python3.12/site-packages/microservices/alpha_centauri\"]"
+      MICROSERVICE_ENTRYPOINT: "microservices.alpha_centauri.service"
+      RIGIL_KENTAURUS_BASIC_AUTH_USERNAME: user
+      RIGIL_KENTAURUS_BASIC_AUTH_PASSWORD: password
+#      KAFKA_BOOTSTRAP_SERVERS: "kafka0:29092"
+    ports:
+      - '8081:8080'
+    depends_on:
+#      - kafka0
+#      - mysql
+      - mocks
+
+  mocks:
+    build:
+      context: ./mocks
+      args:
+        <<: *build-args
+    environment:
+      RELOAD_DIRS: "[\"/home/worker/.local/lib/python3.9/site-packages/mocks\"]"
+    ports:
+      - '8079:8080'
+    volumes:
+      - ./mocks/mocks:/home/worker/.local/lib/python3.9/site-packages/mocks
+
+
+#  mysql:
+#    image: mysql:5.7
+#    platform: linux/x86_64
+#    ports:
+#      - "3306:3306"
+#    environment:
+#      MYSQL_ROOT_USER: root
+#      MYSQL_ROOT_PASSWORD: secret
+#      MYSQL_DATABASE: main
+#      MYSQL_USER: main_ro_username
+#      MYSQL_PASSWORD: main_ro_password
+#
+#  zookeeper:
+#    image: "confluentinc/cp-zookeeper:latest"
+#    hostname: zookeeper
+#    ports:
+#      - "127.0.0.1:2181:2181"
+#    environment:
+#      ZOOKEEPER_CLIENT_PORT: 2181
+#      ZOOKEEPER_TICK_TIME: 2000
+#
+#  kafka0:
+#    image: "confluentinc/cp-kafka:latest"
+#    depends_on:
+#      - zookeeper
+#    ports:
+#      - '127.0.0.1:9092:9092'
+#      - '127.0.0.1:29092:29092'
+#    environment:
+#      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: '1'
+#      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+#      KAFKA_DELETE_TOPIC_ENABLE: "true"
+#      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
+#      KAFKA_LISTENERS: INTERNAL://kafka0:29092,EXTERNAL://kafka0:9092
+#      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka0:29092,EXTERNAL://localhost:9092
+#      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT
+#      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL

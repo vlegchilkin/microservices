@@ -16,7 +16,13 @@
 4. available FastAPI endpoints:
    - http://localhost:8079/
    - http://localhost:8081/
+   - http://localhost:8081/actuator/
+   - http://localhost:8081/actuator/health
+   - http://localhost:8081/common/
    - http://localhost:8081/toliman/
-   - http://localhost:8081/rigil-kentaurus/
+   - http://localhost:8081/toliman/common/
+   - http://localhost:8081/rigil-kentaurus/ (with HTTP Basic auth)
+   - http://localhost:8081/rigil-kentaurus/common/
    - http://localhost:8081/proxima-centauri/
+   - http://localhost:8081/proxima-centauri/common/
    - http://localhost:8081/proxima-centauri/details/

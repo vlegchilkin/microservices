@@ -5,7 +5,7 @@ from starlette.responses import JSONResponse
 from . import log
 from ..common.router import router as common_router
 
-router = APIRouter(prefix="/toliman", tags=["toliman"])
+router = APIRouter(prefix="/toliman", tags=["Toliman"])
 router.include_router(common_router)
 
 

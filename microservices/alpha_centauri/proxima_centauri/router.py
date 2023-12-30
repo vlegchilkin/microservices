@@ -6,7 +6,7 @@ from . import log
 from .details import router as details_router
 from ..common.router import router as common_router
 
-router = APIRouter(prefix="/proxima-centauri")
+router = APIRouter(prefix="/proxima-centauri", tags=['Proxima Centauri'])
 router.include_router(common_router)
 router.include_router(details_router)
 

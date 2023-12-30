@@ -13,7 +13,7 @@ from ..common.router import router as common_router
 app = FastAPI(title="Alpha Centauri")
 app.include_router(actuator_router)
 app.include_router(common_router)
-app.include_router(rigil_kentaurus_router, prefix="/rigil-kentaurus", tags=[""])
+app.include_router(rigil_kentaurus_router, prefix="/rigil-kentaurus", tags=["Rigil Kentaurus"])
 app.include_router(toliman_router)
 app.include_router(proxima_centauri_router)
 

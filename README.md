@@ -8,12 +8,17 @@
     - localhost:5001/docker-python:3.9 have to be resolvable
     - http://127.0.0.1:3141/root (devpi) should be available and have 'root/local' index
 
-3. run:
+3. git clone https://github.com/vlegchilkin/mscom
+
+4. follow https://github.com/vlegchilkin/mscom/blob/main/README.md, as a result:
+   - http://127.0.0.1:3141/root/local has 'mscom' package
+
+5. run:
    ```shell
    docker-compose up -d
    ```
 
-4. available FastAPI endpoints:
+6. available FastAPI endpoints:
     * http://localhost:8079/docs
         - http://localhost:8079/
 

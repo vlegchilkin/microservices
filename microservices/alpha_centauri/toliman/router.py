@@ -3,8 +3,10 @@ from starlette.requests import Request
 from starlette.responses import JSONResponse
 
 from . import log
+from ..common.router import router as common_router
 
 router = APIRouter(prefix="/toliman", tags=["toliman"])
+router.include_router(common_router)
 
 
 @router.on_event("startup")

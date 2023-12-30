@@ -609,13 +609,13 @@ files = [
 
 [[package]]
 name = "mscom"
-version = "0.1.3"
+version = "0.1.5"
 description = ""
 optional = false
 python-versions = ">=3.9,<4.0"
 files = [
-    {file = "mscom-0.1.3-py3-none-any.whl", hash = "sha256:f5e4aab51241c2057fe8b586417cbed6ebefb1551632d33784b666de5482436f"},
-    {file = "mscom-0.1.3.tar.gz", hash = "sha256:6ab02c38debede9a0821681159bede918afe9df13c981052e6069c234fb79207"},
+    {file = "mscom-0.1.5-py3-none-any.whl", hash = "sha256:dc5a1c1d6d8f0176eb8cda574e285f847590beaa65d5f3d741c5b2eba07a6115"},
+    {file = "mscom-0.1.5.tar.gz", hash = "sha256:1716d32e7fd349b38489b18d553cd7d1bfbcbe9b5de4bec4b7cae17cec24326a"},
 ]
 
 [package.dependencies]
@@ -1448,4 +1448,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "67379a0272cbfcc2c802c67696dea1a9aa9849b0e7dcd5da8c9f75f6677eb19a"
+content-hash = "22339f3eeb9aa5e91b81839b6af214274e2937a337c9bb9e8781ef50fdedcad7"

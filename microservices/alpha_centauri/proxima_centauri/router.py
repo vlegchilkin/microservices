@@ -4,8 +4,10 @@ from starlette.responses import JSONResponse
 
 from . import log
 from .details import router as details_router
+from ..common.router import router as common_router
 
 router = APIRouter(prefix="/proxima-centauri")
+router.include_router(common_router)
 router.include_router(details_router)
 
 

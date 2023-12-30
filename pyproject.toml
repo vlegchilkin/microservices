@@ -8,7 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-mscom = { version = "^0.1.3", source = "local" }
+mscom = { version = "^0.1.5", source = "local" }
 uvicorn = { version = "^0.25.0", source = "pypi"}
 
 [tool.poetry.dev-dependencies]

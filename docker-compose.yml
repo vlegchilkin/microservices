@@ -33,6 +33,14 @@ services:
 #      - mysql
       - mocks
 
+  observer:
+    <<: *service
+    environment:
+      RELOAD_DIRS: "[\"/home/worker/.local/lib/python3.12/site-packages/microservices/observer\"]"
+      MICROSERVICE_ENTRYPOINT: "microservices.observer.service"
+    ports:
+      - '8082:8080'
+
   mocks:
     build:
       context: ./mocks

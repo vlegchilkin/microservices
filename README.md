@@ -27,10 +27,18 @@
         - http://localhost:8081/actuator/
         - http://localhost:8081/actuator/health
         - http://localhost:8081/common/
+        - http://localhost:8081/common/some-common-resource (GET/PUT/POST/DELETE/OPTIONS/HEAD/PATCH/TRACE)
+        - http://localhost:8081/celestial_sphere/skies/south/constellations/centaurus/star_systems/Alpha%20Centauri
+        - http://localhost:8081/celestial_sphere/skies/south/constellations/centaurus/star_systems/Alpha%20Centauri/stars/Proxima%20Centauri
+        - http://localhost:8081/celestial_sphere/skies/south/constellations/centaurus/star_systems/Alpha%20Centauri/stars/Proxima%20Centauri/planets/b
+        - http://localhost:8081/celestial_sphere/skies/south/constellations/centaurus/star_systems/Alpha%20Centauri/stars/Proxima%20Centauri/planets/b/oceans/awesome
         - http://localhost:8081/toliman/
         - http://localhost:8081/toliman/common/
+        - http://localhost:8081/toliman/common/some-common-resource (GET/PUT/POST/DELETE/OPTIONS/HEAD/PATCH/TRACE)
         - http://localhost:8081/rigil-kentaurus/ (with HTTP Basic auth)
         - http://localhost:8081/rigil-kentaurus/common/
+        - http://localhost:8081/rigil-kentaurus/common/some-common-resource (GET/PUT/POST/DELETE/OPTIONS/HEAD/PATCH/TRACE)
         - http://localhost:8081/proxima-centauri/
         - http://localhost:8081/proxima-centauri/common/
+        - http://localhost:8081/proxima-centauri/common/some-common-resource (GET/PUT/POST/DELETE/OPTIONS/HEAD/PATCH/TRACE)
         - http://localhost:8081/proxima-centauri/details/

@@ -14,6 +14,7 @@ router.include_router(common_router)
 
 security = HTTPBasic()
 
+
 # unlinked router example
 # from .details import router as details_router
 # router.include_router(details_router)
@@ -41,6 +42,7 @@ async def shutdown_event():
 
 def basic_auth(func):
     """HTTP Basic Authorization wrapper"""
+
     async def wrapper(request: Request, credentials: HTTPBasicCredentials = Depends(security)):
         correct_username = secrets.compare_digest(credentials.username, settings.basic_auth_username)
         correct_password = secrets.compare_digest(credentials.password, settings.basic_auth_password)
@@ -67,3 +69,13 @@ def basic_auth(func):
 @basic_auth
 async def root(request: Request):
     return JSONResponse(content={"owner": "Rigil Kentaurus"})
+
+
+@router.get("/metadata")
+async def get_metadata(request: Request):
+    return JSONResponse(content={"method": "GET Rigil Kentaurus.metadata"})
+
+
+@router.post("/metadata")
+async def update_metadata(request: Request):
+    return JSONResponse(content={"method": "POST Rigil Kentaurus.metadata"})

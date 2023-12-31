@@ -33,3 +33,33 @@ async def root(request: Request):
     return JSONResponse(content={"owner": "Alpha Centauri"})
 
 
+@app.get(
+    "/celestial_sphere/skies/{sky}"
+    "/constellations/{constellation}/star_systems/{star_system}"
+)
+async def get_star_system(sky: str, constellation: str, star_system: str):
+    return JSONResponse(content={"action": "Get Star System"})
+
+
+@app.get(
+    "/celestial_sphere/skies/{sky}"
+    "/constellations/{constellation}/star_systems/{star_system}/stars/{star}"
+)
+async def get_star(sky: str, constellation: str, star_system: str, star: str):
+    return JSONResponse(content={"action": "Get Star"})
+
+
+@app.get(
+    "/celestial_sphere/skies/{sky}"
+    "/constellations/{constellation}/star_systems/{star_system}/stars/{star}/planets/{planet}"
+)
+async def get_planet(sky: str, constellation: str, star_system: str, star: str, planet: str):
+    return JSONResponse(content={"action": "Get Planet"})
+
+
+@app.get(
+    "/celestial_sphere/skies/{sky}"
+    "/constellations/{constellation}/star_systems/{star_system}/stars/{star}/planets/{planet}/oceans/{ocean}"
+)
+async def get_ocean(sky: str, constellation: str, star_system: str, star: str, planet: str, ocean: str):
+    return JSONResponse(content={"action": "Get Ocean"})

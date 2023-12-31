@@ -24,3 +24,13 @@ async def shutdown_event():
 @router.get("/")
 async def root(request: Request):
     return JSONResponse(content={"owner": "Proxima Centauri"})
+
+
+@router.get("/metadata")
+async def get_metadata(request: Request):
+    return JSONResponse(content={"method": "GET Proxima Centauri.metadata"})
+
+
+@router.post("/metadata")
+async def update_metadata(request: Request):
+    return JSONResponse(content={"method": "POST Proxima Centauri.metadata"})

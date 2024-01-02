@@ -23,7 +23,7 @@
         - http://localhost:8079/
       
     * https://localhost/ (Main Gate - HAProxy) !! Self-signed certificate, you have to accept it in your browser !!
-        -  Alpha Centauri routes https://localhost/alpha-centrauri/*  
+        -  Alpha Centauri routes https://localhost/alpha-centauri/*  
         -  Observer routes https://localhost/* 
    
     * http://localhost:8081/docs (Alpha Centauri)

@@ -21,7 +21,11 @@
 6. available FastAPI endpoints:
     * http://localhost:8079/docs (Mock Services)
         - http://localhost:8079/
-
+      
+    * http://localhost:8080/ | https://localhost:8443/ (Main Gate - HAProxy)
+        -  Alpha Centauri routes http://localhost:8080/alpha-centrauri/* | https://localhost:8443/alpha-centrauri/*  
+        -  Observer routes http://localhost:8080/* | https://localhost:8443/* 
+   
     * http://localhost:8081/docs (Alpha Centauri)
         - http://localhost:8081/
         - http://localhost:8081/actuator/

@@ -22,9 +22,9 @@
     * http://localhost:8079/docs (Mock Services)
         - http://localhost:8079/
       
-    * http://localhost:8080/ | https://localhost:8443/ (Main Gate - HAProxy)
-        -  Alpha Centauri routes http://localhost:8080/alpha-centrauri/* | https://localhost:8443/alpha-centrauri/*  
-        -  Observer routes http://localhost:8080/* | https://localhost:8443/* 
+    * https://localhost/ (Main Gate - HAProxy) !! Self-signed certificate, you have to accept it in your browser !!
+        -  Alpha Centauri routes https://localhost/alpha-centrauri/*  
+        -  Observer routes https://localhost/* 
    
     * http://localhost:8081/docs (Alpha Centauri)
         - http://localhost:8081/

@@ -9,6 +9,8 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 mscom = { version = "^0.1.5", source = "local" }
+flask = { version = "^3.0.0", source = "pypi" }
+a2wsgi = { version = "^1.10.0", source = "pypi" }
 uvicorn = { version = "^0.25.0", source = "pypi"}
 
 [tool.poetry.dev-dependencies]

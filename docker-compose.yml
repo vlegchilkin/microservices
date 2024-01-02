@@ -41,6 +41,13 @@ services:
     ports:
       - '8082:8080'
 
+  mira:
+    <<: *service
+    environment:
+      MICROSERVICE_ENTRYPOINT: "microservices.mira.app"
+    ports:
+      - '8083:8080'
+
   haproxy:
     build:
       context: ./haproxy

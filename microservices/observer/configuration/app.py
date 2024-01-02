@@ -1,13 +1,16 @@
 import mscom.config as microservice_config
 from fastapi import FastAPI
+from a2wsgi import WSGIMiddleware
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 
+import microservices.mira.app
 from . import log
 from mscom.actuator.router import router as actuator_router
 
 app = FastAPI(title="Observer")
 app.include_router(actuator_router)
+app.mount("/mira_shadow", WSGIMiddleware(microservices.mira.app.app))  # Flask APP
 
 
 @app.on_event("startup")

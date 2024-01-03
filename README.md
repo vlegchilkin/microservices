@@ -51,3 +51,20 @@
         - http://localhost:8082/celestial_sphere/skies/south/constellations/centaurus/star_systems/Alpha%20Centauri/stars/Proxima%20Centauri
         - http://localhost:8082/celestial_sphere/skies/south/constellations/centaurus/star_systems/Alpha%20Centauri/stars/Proxima%20Centauri/planets/b
         - http://localhost:8082/celestial_sphere/skies/south/constellations/centaurus/star_systems/Alpha%20Centauri/stars/Proxima%20Centauri/planets/b/oceans/awesome
+        - http://localhost:8082/mira_shadow/* (Mira mounting point (Flask), see Mira microservice)
+
+7. available Flask endpoints:
+    * http://localhost:8083/ (Mira)
+        - http://localhost:8082/
+        - http://localhost:8082/details/
+        - http://localhost:8082/subcontext/details
+        - http://localhost:8082/subcontext/view
+        - http://localhost:8082/common/
+        - http://localhost:8082/common/hello
+        - http://localhost:8082/common/greet
+        - http://localhost:8082/common/greet/YourName
+        - http://localhost:8082/a
+        - http://localhost:8082/a/details
+        - http://localhost:8082/b
+        - http://localhost:8082/b/details
+

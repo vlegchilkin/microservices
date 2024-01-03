@@ -13,7 +13,7 @@ app.register_blueprint(mira_b_bp)
 subcontext = "/subcontext"
 
 
-@app.route('/')
+@app.get('/')
 def index():
     return 'Hello, World! I am a Flask app!'
 

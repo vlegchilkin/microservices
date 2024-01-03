@@ -15,6 +15,7 @@
 
 5. run:
    ```shell
+   poetry update --lock
    docker-compose up -d
    ```
 

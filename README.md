@@ -56,16 +56,16 @@
 
 7. available Flask endpoints:
     * http://localhost:8083/ (Mira)
-        - http://localhost:8082/
-        - http://localhost:8082/details/
-        - http://localhost:8082/subcontext/details
-        - http://localhost:8082/subcontext/view
-        - http://localhost:8082/common/
-        - http://localhost:8082/common/hello
-        - http://localhost:8082/common/greet
-        - http://localhost:8082/common/greet/YourName
-        - http://localhost:8082/a
-        - http://localhost:8082/a/details
-        - http://localhost:8082/b
-        - http://localhost:8082/b/details
+        - http://localhost:8083/
+        - http://localhost:8083/details/
+        - http://localhost:8083/subcontext/details
+        - http://localhost:8083/subcontext/view
+        - http://localhost:8083/common/
+        - http://localhost:8083/common/hello
+        - http://localhost:8083/common/greet
+        - http://localhost:8083/common/greet/YourName
+        - http://localhost:8083/a
+        - http://localhost:8083/a/details
+        - http://localhost:8083/b
+        - http://localhost:8083/b/details
 

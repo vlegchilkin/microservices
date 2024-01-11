@@ -11,9 +11,15 @@ from ..proxima_centauri.router import router as proxima_centauri_router
 from ..common.router import router as common_router
 from ..common import some  # noqa: F401
 
-app = FastAPI(title="Alpha Centauri")
-app.include_router(actuator_router)
-app.include_router(common_router)
+
+def build_application():
+    fast_api = FastAPI(title="Alpha Centauri")
+    fast_api.include_router(actuator_router)
+    fast_api.include_router(common_router)
+    return fast_api
+
+
+app = build_application()
 app.include_router(rigil_kentaurus_router, prefix="/rigil-kentaurus", tags=["Rigil Kentaurus"])
 app.include_router(toliman_router)
 app.include_router(proxima_centauri_router)

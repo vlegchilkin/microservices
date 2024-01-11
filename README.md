@@ -35,13 +35,10 @@
         - http://localhost:8081/common/some-common-resource (GET/PUT/POST/DELETE/OPTIONS/HEAD/PATCH/TRACE)
         - http://localhost:8081/toliman/
         - http://localhost:8081/toliman/common/
-        - http://localhost:8081/toliman/common/some-common-resource (GET/PUT/POST/DELETE/OPTIONS/HEAD/PATCH/TRACE)
         - http://localhost:8081/rigil-kentaurus/ (with HTTP Basic auth)
         - http://localhost:8081/rigil-kentaurus/common/
-        - http://localhost:8081/rigil-kentaurus/common/some-common-resource (GET/PUT/POST/DELETE/OPTIONS/HEAD/PATCH/TRACE)
         - http://localhost:8081/proxima-centauri/
         - http://localhost:8081/proxima-centauri/common/
-        - http://localhost:8081/proxima-centauri/common/some-common-resource (GET/PUT/POST/DELETE/OPTIONS/HEAD/PATCH/TRACE)
         - http://localhost:8081/proxima-centauri/details/
 
     * http://localhost:8082/docs (Observer)

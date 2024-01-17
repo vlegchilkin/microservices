@@ -70,3 +70,10 @@
 8. available Django endpoints:
    * http://localhost:8084/ (Django)
         - http://localhost:8084/admin/* (lots of endpoints by Django admin)
+        - http://localhost:8084/basic/function-view
+        - http://localhost:8084/basic/function-view-with-if (post and get)
+        - http://localhost:8084/basic/function-view-with-decorator
+        - http://localhost:8084/basic/class-view
+        - http://localhost:8084/basic/class-view-with-decorator
+        - http://localhost:8084/basic/template-class-view
+     

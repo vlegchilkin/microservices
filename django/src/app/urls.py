@@ -17,6 +17,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from .views import (
+    function_view,
+    function_view_with_if,
+    function_view_with_decorator,
+    ClassView,
+    ClassViewWithDecorator,
+    TemplateClassView
+)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('basic/function-view/', function_view, name="function_view"),
+    path('basic/function-view-with-if/', function_view_with_if, name="function_view_with_if"),
+    path('basic/function-view-with-decorator/', function_view_with_decorator, name="function_view_with_decorator"),
+    path('basic/class-view/', ClassView.as_view(), name="class_view"),
+    path('basic/class-view-with-decorator/', ClassViewWithDecorator.as_view(), name="class_view_with_decorator"),
+    path('basic/template-class-view/', TemplateClassView.as_view(), name="template_class_view"),
 ]

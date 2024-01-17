@@ -57,6 +57,8 @@ services:
       python manage.py migrate &&
       python manage.py collectstatic --noinput &&
       gunicorn --bind :8000 --workers=1 --worker-class gevent --reload app.wsgi:application --config ./app/gunicorn.py"
+    ports:
+      - '8084:8000'
     volumes:
       - ./django/src:/src
       - django_media_volume:/media

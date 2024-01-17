@@ -25,7 +25,8 @@
       
     * https://localhost/ (Main Gate - HAProxy) !! Self-signed certificate, you have to accept it in your browser !!
         -  Alpha Centauri routes https://localhost/alpha-centauri/*  
-        -  Observer routes https://localhost/* 
+        -  Observer routes https://localhost/*
+        -  Django routes https://localhost/django/*
    
     * http://localhost:8081/docs (Alpha Centauri)
         - http://localhost:8081/
@@ -66,3 +67,6 @@
         - http://localhost:8083/b
         - http://localhost:8083/b/details
 
+8. available Django endpoints:
+   * http://localhost:8084/ (Django)
+        - http://localhost:8084/admin/* (lots of endpoints by Django admin)

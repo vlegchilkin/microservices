@@ -48,6 +48,24 @@ services:
     ports:
       - '8083:8080'
 
+  django:
+    build: ./django
+    container_name: "django"
+    command: >
+      bash -c "
+      python manage.py makemigrations &&
+      python manage.py migrate &&
+      python manage.py collectstatic --noinput &&
+      gunicorn --bind :8000 --workers=1 --worker-class gevent --reload app.wsgi:application --config ./app/gunicorn.py"
+    volumes:
+      - ./django/src:/src
+      - django_media_volume:/media
+      - django_static_volume:/static
+      - django_db:/db
+    tty: true
+    env_file:
+      - ./django/.env.local
+
   haproxy:
     build:
       context: ./haproxy
@@ -67,6 +85,10 @@ services:
     volumes:
       - ./mocks/mocks:/home/worker/.local/lib/python3.9/site-packages/mocks
 
+volumes:
+  django_media_volume:
+  django_static_volume:
+  django_db:
 
 #  mysql:
 #    image: mysql:5.7

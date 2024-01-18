@@ -1,3 +1,5 @@
+import random
+
 from django.http import HttpResponse
 from django.views import View
 from django.views.generic import TemplateView
@@ -60,3 +62,19 @@ def function_added_via_plus(request):
 
 def function_added_via_extend(request):
     return HttpResponse('Hello, this is a function-based view with extend function')
+
+
+def cached_view(request):
+    return HttpResponse(f'Hello, this is a cached view (10 sec). Current value is {random.randint(0, 10000)}')
+
+
+def required_post_view(request):
+    return HttpResponse('Hello, this is available only for post request')
+
+
+def view_csrf_exempt(request):
+    return HttpResponse("csrf_exempt view")
+
+
+def view_permission_required(request):
+    return HttpResponse('Hello, this is permission required')

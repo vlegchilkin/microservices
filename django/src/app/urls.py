@@ -15,7 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.contrib.auth.decorators import permission_required
 from django.urls import path, include, re_path
+from django.views.decorators.cache import cache_page
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_POST
 
 from .views import (
     function_view,
@@ -24,7 +28,8 @@ from .views import (
     function_view_with_decorator,
     ClassView,
     ClassViewWithDecorator,
-    TemplateClassView, function_added_via_plus, function_added_via_extend
+    TemplateClassView, function_added_via_plus, function_added_via_extend, cached_view, required_post_view,
+    view_csrf_exempt, view_permission_required
 )
 
 urlpatterns = [
@@ -44,6 +49,11 @@ urlpatterns = [
     path('basic/template-class-view/', TemplateClassView.as_view(), name="template_class_view"),
     # Regexp url
     re_path(r'^basic/regexp-url/(?P<year>[0-9]{4})/$', function_view_for_regexp, name='function_view_for_regexp'),
+    # Examples of wrapped views
+    path('wrapped-view/cached-view', cache_page(10)(cached_view)),
+    path('wrapped-view/require-post', require_POST(required_post_view)),
+    path('wrapped-view/csrf_exempt', csrf_exempt(view_csrf_exempt)),
+    path('wrapped-view/permission_required', permission_required('can_view')(view_permission_required)),
 
     # Included urls must be collected with `included_urls/` prefix
     path('included_urls/', include('included_urls.urls')),

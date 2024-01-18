@@ -33,6 +33,7 @@ from .views import (
     view_csrf_exempt, view_permission_required
 )
 
+# See `app.settings.py` -> `ROOT_URLCONF`
 urlpatterns = [
     # URLs from the django library
     # Most likely they should not be collected by endpoints plugin

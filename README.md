@@ -83,4 +83,7 @@
         - http://localhost:8084/rest/viewset
         - http://localhost:8084/rest/custom-model
         - http://localhost:8084/rest/api-view
-        - http://localhost:8084/rest-router/router/
+        - http://localhost:8084/rest-router/view-set
+        - http://localhost:8084/rest-router/view-set-on-actions/set_password
+        - http://localhost:8084/rest-router/view-set-on-actions/100500/set_password
+        - http://localhost:8084/rest-router/view-set-on-actions/set-password-custom-path

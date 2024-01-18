@@ -49,5 +49,8 @@ urlpatterns = [
     path('different_urls_file_name/', include('different_urls_file_name.api.endpoints')),
 
     # basic rest framework cases
-    path('rest/', include('rest.urls'))
+    path('rest/', include('rest.urls')),
+
+    # rest framework with router in urls.py
+    path('rest-router/', include('rest_router.urls')),
 ]

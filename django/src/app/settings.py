@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     "included_urls.apps.IncludedUrlsConfig",
     "different_urls_file_name.apps.DifferentUrlsFileNameConfig",
-    "rest.apps.RestConfig"
+    "rest.apps.RestConfig",
+    "rest_router.apps.RestRouterConfig"
 ]
 
 MIDDLEWARE = [

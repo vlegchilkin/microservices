@@ -83,3 +83,4 @@
         - http://localhost:8084/rest/viewset
         - http://localhost:8084/rest/custom-model
         - http://localhost:8084/rest/api-view
+        - http://localhost:8084/rest-router/router/

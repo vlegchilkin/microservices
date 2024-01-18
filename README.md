@@ -18,8 +18,9 @@
    poetry update --lock
    docker-compose up -d
    ```
+6. While editing Django endpoints, mark `django/src` folder as Sources root for correct resolving
 
-6. available FastAPI endpoints:
+7. available FastAPI endpoints:
     * http://localhost:8079/docs (Mock Services)
         - http://localhost:8079/
       
@@ -52,7 +53,7 @@
         - http://localhost:8082/celestial_sphere/skies/south/constellations/centaurus/star_systems/Alpha%20Centauri/stars/Proxima%20Centauri/planets/b/oceans/awesome
         - http://localhost:8082/mira_shadow/* (Mira mounting point (Flask), see Mira microservice)
 
-7. available Flask endpoints:
+8. available Flask endpoints:
     * http://localhost:8083/ (Mira)
         - http://localhost:8083/
         - http://localhost:8083/details/
@@ -67,7 +68,7 @@
         - http://localhost:8083/b
         - http://localhost:8083/b/details
 
-8. available Django endpoints:
+9. available Django endpoints:
    * http://localhost:8084/ (Django)
         - http://localhost:8084/admin/* (lots of endpoints by Django admin)
         - http://localhost:8084/basic/function-view

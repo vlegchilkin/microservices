@@ -52,3 +52,11 @@ class TemplateClassView(TemplateView):
 
 def function_view_for_regexp(request, year):
     return HttpResponse(f'Hello, this is a function-based view with year={year}')
+
+
+def function_added_via_plus(request):
+    return HttpResponse('Hello, this is a function-based view with plus function')
+
+
+def function_added_via_extend(request):
+    return HttpResponse('Hello, this is a function-based view with extend function')

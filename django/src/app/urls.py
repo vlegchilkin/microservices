@@ -24,7 +24,7 @@ from .views import (
     function_view_with_decorator,
     ClassView,
     ClassViewWithDecorator,
-    TemplateClassView
+    TemplateClassView, function_added_via_plus, function_added_via_extend
 )
 
 urlpatterns = [
@@ -57,3 +57,11 @@ urlpatterns = [
     # rest framework with router in urls.py
     path('rest-router/', include('rest_router.urls')),
 ]
+
+urlpatterns += [
+    path('added-via-plus', function_added_via_plus, name='added-via-plus')
+]
+
+urlpatterns.extend([
+    path('added-via-extend', function_added_via_extend, name='added-via-plus')
+])

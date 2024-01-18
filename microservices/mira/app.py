@@ -1,5 +1,5 @@
 from mscom import config
-from flask import Flask
+from flask import Flask, Blueprint
 
 from .common import blueprint as common_bp
 from .mira_a.router import blueprint as mira_a_bp
@@ -18,7 +18,7 @@ def index():
     return 'Hello, World! I am a Flask app!'
 
 
-@app.route('/details')
+@app.route('/details', methods=['GET', 'HEAD'])
 def details():
     return 'I am a Flask app details'
 
@@ -31,6 +31,20 @@ def sub_details():
 @app.route(subcontext + '/view')
 def sub_view():
     return 'I am a Flask app subcontext view'
+
+
+blueprint = Blueprint("inner_bp", __name__, url_prefix='/inner_bp')
+app.register_blueprint(blueprint, url_prefix="/xxx")
+
+
+@blueprint.route('/some-sub-route', methods=["GET", "HEAD"])
+def sub_route():
+    return 'I am Sub Route'
+
+
+@blueprint.post('/some-sub-route')
+def sub_route():
+    return 'I am Sub Route'
 
 
 if __name__ == "__main__":

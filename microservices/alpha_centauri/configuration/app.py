@@ -4,7 +4,7 @@ from starlette.requests import Request
 from starlette.responses import JSONResponse
 
 from . import log
-from mscom.actuator.router import router as actuator_router
+from mscom.actuator.router import router
 from ..rigil_kentaurus.router import router as rigil_kentaurus_router
 from ..toliman.router import router as toliman_router
 from ..proxima_centauri.router import router as proxima_centauri_router
@@ -14,7 +14,7 @@ from ..common import some  # noqa: F401
 
 def build_application():
     fast_api = FastAPI(title="Alpha Centauri")
-    fast_api.include_router(actuator_router)
+    fast_api.include_router(router)
     fast_api.include_router(common_router)
     return fast_api
 

@@ -81,6 +81,8 @@
         - http://localhost:8084/wrapped-view/require-post
         - http://localhost:8084/wrapped-view/csrf_exempt
         - http://localhost:8084/wrapped-view/permission_required
+        - http://localhost:8084/auth/token
+        - http://localhost:8084/auth/token/refresh
         - http://localhost:8084/added-via-plus
         - http://localhost:8084/added-via-extend
         - http://localhost:8084/included_urls/function-1

@@ -20,6 +20,7 @@ from django.urls import path, include, re_path
 from django.views.decorators.cache import cache_page
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 from .views import (
     function_view,
@@ -66,6 +67,11 @@ urlpatterns = [
 
     # rest framework with router in urls.py
     path('rest-router/', include('rest_router.urls')),
+
+    # Important urls with implementation provided by third party package
+    # They should be present in endpoints
+    path('auth/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('auth/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
 
 urlpatterns += [

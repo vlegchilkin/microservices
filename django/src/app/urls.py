@@ -27,15 +27,24 @@ from .views import (
 )
 
 urlpatterns = [
+    # URLs from the django library
+    # Most likely they should not be collected by endpoints plugin
     path('admin/', admin.site.urls),
+
+    # Basic views in Django directly imported here
     path('basic/function-view/', function_view, name="function_view"),
+    # In very simple scenarios it is common to check for HTTP method using if
     path('basic/function-view-with-if/', function_view_with_if, name="function_view_with_if"),
+    # Decorated with `login_required` which might affect endpoint collection
     path('basic/function-view-with-decorator/', function_view_with_decorator, name="function_view_with_decorator"),
     path('basic/class-view/', ClassView.as_view(), name="class_view"),
+    # Decorated with `method_decorator` which might affect endpoint collection
     path('basic/class-view-with-decorator/', ClassViewWithDecorator.as_view(), name="class_view_with_decorator"),
     path('basic/template-class-view/', TemplateClassView.as_view(), name="template_class_view"),
 
+    # Included urls must be collected with `included_urls/` prefix
     path('included_urls/', include('included_urls.urls')),
 
+    # The same as `included_urls` but URLs are defined in `api/endpoints.py`
     path('different_urls_file_name/', include('different_urls_file_name.api.endpoints')),
 ]

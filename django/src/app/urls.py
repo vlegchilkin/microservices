@@ -36,4 +36,6 @@ urlpatterns = [
     path('basic/template-class-view/', TemplateClassView.as_view(), name="template_class_view"),
 
     path('included_urls/', include('included_urls.urls')),
+
+    path('different_urls_file_name/', include('different_urls_file_name.api.endpoints')),
 ]

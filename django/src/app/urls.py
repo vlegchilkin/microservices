@@ -14,6 +14,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.auth.decorators import permission_required
 from django.urls import path, include, re_path
@@ -22,6 +23,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
+from . import settings
 from .views import (
     function_view,
     function_view_for_regexp,
@@ -82,3 +84,7 @@ urlpatterns += [
 urlpatterns.extend([
     path('added-via-extend', function_added_via_extend, name='added-via-plus')
 ])
+
+# for serving django static files, like admin and rest-framework forms
+# it is better to use nginx or so, but for this project it should be enough
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

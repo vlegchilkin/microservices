@@ -15,10 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 
 from .views import (
     function_view,
+    function_view_for_regexp,
     function_view_with_if,
     function_view_with_decorator,
     ClassView,
@@ -41,6 +42,8 @@ urlpatterns = [
     # Decorated with `method_decorator` which might affect endpoint collection
     path('basic/class-view-with-decorator/', ClassViewWithDecorator.as_view(), name="class_view_with_decorator"),
     path('basic/template-class-view/', TemplateClassView.as_view(), name="template_class_view"),
+    # Regexp url
+    re_path(r'^basic/regexp-url/(?P<year>[0-9]{4})/$', function_view_for_regexp, name='function_view_for_regexp'),
 
     # Included urls must be collected with `included_urls/` prefix
     path('included_urls/', include('included_urls.urls')),

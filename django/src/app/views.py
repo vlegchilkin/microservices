@@ -48,3 +48,7 @@ class TemplateClassView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['variable'] = 'value'
         return context
+
+
+def function_view_for_regexp(request, year):
+    return HttpResponse(f'Hello, this is a function-based view with year={year}')

@@ -76,6 +76,7 @@
         - http://localhost:8084/basic/class-view
         - http://localhost:8084/basic/class-view-with-decorator
         - http://localhost:8084/basic/template-class-view
+        - http://localhost:8084/basic/regexp-url/2024
         - http://localhost:8084/included_urls/function-1
         - http://localhost:8084/included_urls/function-2
         - http://localhost:8084/different_urls_file_name/function-3

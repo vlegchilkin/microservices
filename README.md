@@ -80,3 +80,6 @@
         - http://localhost:8084/included_urls/function-2
         - http://localhost:8084/different_urls_file_name/function-3
         - http://localhost:8084/different_urls_file_name/function-4
+        - http://localhost:8084/rest/viewset
+        - http://localhost:8084/rest/custom-model
+        - http://localhost:8084/rest/api-view

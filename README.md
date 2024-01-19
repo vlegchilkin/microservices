@@ -18,14 +18,16 @@
    poetry update --lock
    docker-compose up -d
    ```
+6. While editing Django endpoints, mark `django/src` folder as Sources root for correct resolving
 
-6. available FastAPI endpoints:
+7. available FastAPI endpoints:
     * http://localhost:8079/docs (Mock Services)
         - http://localhost:8079/
       
     * https://localhost/ (Main Gate - HAProxy) !! Self-signed certificate, you have to accept it in your browser !!
         -  Alpha Centauri routes https://localhost/alpha-centauri/*  
-        -  Observer routes https://localhost/* 
+        -  Observer routes https://localhost/*
+        -  Django routes https://localhost/django/*
    
     * http://localhost:8081/docs (Alpha Centauri)
         - http://localhost:8081/
@@ -51,7 +53,7 @@
         - http://localhost:8082/celestial_sphere/skies/south/constellations/centaurus/star_systems/Alpha%20Centauri/stars/Proxima%20Centauri/planets/b/oceans/awesome
         - http://localhost:8082/mira_shadow/* (Mira mounting point (Flask), see Mira microservice)
 
-7. available Flask endpoints:
+8. available Flask endpoints:
     * http://localhost:8083/ (Mira)
         - http://localhost:8083/
         - http://localhost:8083/details/
@@ -66,3 +68,32 @@
         - http://localhost:8083/b
         - http://localhost:8083/b/details
 
+9. available Django endpoints:
+   * http://localhost:8084/ (Django)
+        - http://localhost:8084/admin/* (lots of endpoints by Django admin)
+        - http://localhost:8084/basic/function-view
+        - http://localhost:8084/basic/function-view-with-if (post and get)
+        - http://localhost:8084/basic/function-view-with-decorator
+        - http://localhost:8084/basic/class-view
+        - http://localhost:8084/basic/class-view-with-decorator
+        - http://localhost:8084/basic/template-class-view
+        - http://localhost:8084/basic/regexp-url/2024
+        - http://localhost:8084/wrapped-view/cached-view
+        - http://localhost:8084/wrapped-view/require-post
+        - http://localhost:8084/wrapped-view/csrf_exempt
+        - http://localhost:8084/wrapped-view/permission_required
+        - http://localhost:8084/auth/token
+        - http://localhost:8084/auth/token/refresh
+        - http://localhost:8084/added-via-plus
+        - http://localhost:8084/added-via-extend
+        - http://localhost:8084/included_urls/function-1
+        - http://localhost:8084/included_urls/function-2
+        - http://localhost:8084/different_urls_file_name/function-3
+        - http://localhost:8084/different_urls_file_name/function-4
+        - http://localhost:8084/rest/viewset
+        - http://localhost:8084/rest/custom-model
+        - http://localhost:8084/rest/api-view
+        - http://localhost:8084/rest-router/view-set
+        - http://localhost:8084/rest-router/view-set-on-actions/set_password
+        - http://localhost:8084/rest-router/view-set-on-actions/100500/set_password
+        - http://localhost:8084/rest-router/view-set-on-actions/set-password-custom-path

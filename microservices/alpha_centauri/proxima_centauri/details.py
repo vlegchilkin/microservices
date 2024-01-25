@@ -4,7 +4,12 @@ from starlette.responses import JSONResponse
 
 from . import log
 
-router = APIRouter(prefix="/details")
+
+def build_router():
+    return APIRouter(prefix="/details")
+
+
+router = build_router()
 
 
 @router.on_event("startup")
@@ -17,6 +22,6 @@ async def shutdown_event():
     log.info("Proxima Centauri (Details) shutdown completed")
 
 
-@router.get("/")
+@router.get("/xxx")
 async def root(request: Request):
     return JSONResponse(content={"owner": "Proxima Centauri (Details)"})

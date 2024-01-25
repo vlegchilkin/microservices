@@ -14,12 +14,12 @@ from ..common import some  # noqa: F401
 
 def build_application():
     fast_api = FastAPI(title="Alpha Centauri")
-    fast_api.include_router(router)
     fast_api.include_router(common_router)
     return fast_api
 
 
 app = build_application()
+app.include_router(router)
 app.include_router(rigil_kentaurus_router, prefix="/rigil-kentaurus", tags=["Rigil Kentaurus"])
 app.include_router(toliman_router)
 app.include_router(proxima_centauri_router)

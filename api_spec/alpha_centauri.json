@@ -1,0 +1,406 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Alpha Centauri",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/common/": {
+      "get": {
+        "tags": [
+          "Proxima Centauri"
+        ],
+        "summary": "Root",
+        "operationId": "root_common__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/common/some-common-resource": {
+      "get": {
+        "summary": "Some Common Resource",
+        "operationId": "some_common_resource_common_some_common_resource_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Some Common Resource",
+        "operationId": "some_common_resource_common_some_common_resource_put",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Some Common Resource",
+        "operationId": "some_common_resource_common_some_common_resource_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Some Common Resource",
+        "operationId": "some_common_resource_common_some_common_resource_delete",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "summary": "Some Common Resource",
+        "operationId": "some_common_resource_common_some_common_resource_options",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "head": {
+        "summary": "Some Common Resource",
+        "operationId": "some_common_resource_common_some_common_resource_head",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "summary": "Some Common Resource",
+        "operationId": "some_common_resource_common_some_common_resource_patch",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "trace": {
+        "summary": "Some Common Resource",
+        "operationId": "some_common_resource_common_some_common_resource_trace",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/actuator/": {
+      "get": {
+        "summary": "Root",
+        "operationId": "root_actuator__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/actuator/health": {
+      "get": {
+        "summary": "Root",
+        "operationId": "root_actuator_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rigil-kentaurus/common/": {
+      "get": {
+        "tags": [
+          "Rigil Kentaurus"
+        ],
+        "summary": "Root",
+        "operationId": "root_rigil_kentaurus_common__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rigil-kentaurus/": {
+      "get": {
+        "tags": [
+          "Rigil Kentaurus"
+        ],
+        "summary": "Wrapper",
+        "operationId": "wrapper_rigil_kentaurus__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBasic": []
+          }
+        ]
+      }
+    },
+    "/rigil-kentaurus/metadata": {
+      "get": {
+        "tags": [
+          "Rigil Kentaurus"
+        ],
+        "summary": "Get Metadata",
+        "operationId": "get_metadata_rigil_kentaurus_metadata_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Rigil Kentaurus"
+        ],
+        "summary": "Update Metadata",
+        "operationId": "update_metadata_rigil_kentaurus_metadata_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/toliman_redefined/toliman/common/": {
+      "get": {
+        "tags": [
+          "Toliman"
+        ],
+        "summary": "Root",
+        "operationId": "root_toliman_redefined_toliman_common__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/toliman_redefined/toliman/": {
+      "get": {
+        "tags": [
+          "Toliman"
+        ],
+        "summary": "Root",
+        "operationId": "root_toliman_redefined_toliman__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/toliman_redefined/toliman/metadata": {
+      "get": {
+        "tags": [
+          "Toliman"
+        ],
+        "summary": "Get Metadata",
+        "operationId": "get_metadata_toliman_redefined_toliman_metadata_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Toliman"
+        ],
+        "summary": "Update Metadata",
+        "operationId": "update_metadata_toliman_redefined_toliman_metadata_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/details/xxx": {
+      "get": {
+        "tags": [
+          "Proxima Centauri"
+        ],
+        "summary": "Root",
+        "operationId": "root_details_xxx_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "summary": "Root",
+        "operationId": "root__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/metadata": {
+      "get": {
+        "tags": [
+          "Proxima Centauri"
+        ],
+        "summary": "Get Metadata",
+        "operationId": "get_metadata_metadata_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Proxima Centauri"
+        ],
+        "summary": "Update Metadata",
+        "operationId": "update_metadata_metadata_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "HTTPBasic": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    }
+  }
+}

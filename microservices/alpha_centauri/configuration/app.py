@@ -21,7 +21,7 @@ def build_application():
 app = build_application()
 app.include_router(router)
 app.include_router(rigil_kentaurus_router, prefix="/rigil-kentaurus", tags=["Rigil Kentaurus"])
-app.include_router(toliman_router)
+app.include_router(toliman_router, prefix="/toliman_redefined")
 app.include_router(proxima_centauri_router)
 
 
